@@ -24,3 +24,8 @@ functions:
           method: get
           cors: true
           integration: lambda
+          
+  rotar:
+    handler: RotarSecretos.lambda_handler
+    events:
+      - schedule: rate(10 minutes)
